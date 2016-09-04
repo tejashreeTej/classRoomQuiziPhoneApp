@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">PlacesAroundMe</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_sign_up">Sign Up</string>
+    <string name="title_activity_post">PostActivity</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_detail">Reviews</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_tab_">Tab_Activity</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_activity_tab">TabActivity</string>
+    <string name="title_activity_display_map">DisplayMap</string>
+    <string name="title_activity_my_tab">MyTabActivity</string>
+
+    <string-array name="distance">
+        <item>5 mile</item>
+        <item>10 mile</item>
+        <item>15 mile</item>
+        <item>20 mile</item>
+    </string-array>
+    <string-array name="category">
+        <item>Other</item>
+        <item>Restaurant</item>
+        <item>Shopping</item>
+        <item>Historic Place</item>
+        <item>Parks</item>
+    </string-array>
+    <string-array name="setcategory">
+        <item>All</item>
+        <item>Restaurant</item>
+        <item>Shopping</item>
+        <item>Historic Place</item>
+        <item>Parks</item>
+    </string-array>
+    <string name="title_activity_splash">SplashActivity</string>
+</resources>

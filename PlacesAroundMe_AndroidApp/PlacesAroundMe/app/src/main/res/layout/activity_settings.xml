@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.abhi.placesaroundme.SettingsActivity"
+    android:id="@+id/setting"
+    android:background="@drawable/background1">
+
+    <TextView
+        android:id="@+id/txt_setting__distance"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Distance"
+        android:textColor="#4b04ff"
+        android:textSize="@dimen/abc_text_size_body_1_material"
+        android:typeface="normal"/>
+
+    <Spinner
+        android:layout_marginTop="13dp"
+        android:id="@+id/spinner_settings_distance"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_setting__distance"
+        android:entries="@array/distance"
+        android:background="#d9deff"/>
+
+    <TextView
+        android:layout_marginTop="13dp"
+        android:id="@+id/txt_setting_category"
+        android:text="Category :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#4b04ff"
+        android:layout_below="@+id/spinner_settings_distance"
+        android:textSize="@dimen/abc_text_size_body_1_material"
+        android:typeface="serif"
+        />
+
+    <Spinner
+        android:layout_marginTop="13dp"
+        android:id="@+id/spinner_settings_category"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_setting_category"
+        android:entries="@array/setcategory"
+        android:background="#d9deff"/>
+
+    <TextView
+        android:layout_marginTop="13dp"
+        android:id="@+id/txt_settings_user"
+        android:text="see All places :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#4b04ff"
+        android:layout_below="@+id/spinner_settings_category"
+        android:textSize="@dimen/abc_text_size_body_1_material"
+        android:typeface="serif"
+        />
+
+    <CheckBox
+        android:layout_marginTop="13dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkbox_settings_user"
+        android:background="#d9deff"
+        android:layout_below="@+id/txt_settings_user"
+        android:checked="false"
+        android:text="See All"/>
+
+    <Button
+        android:layout_marginTop="13dp"
+        android:id="@+id/button_setting__set"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Set"
+        android:layout_below="@id/checkbox_settings_user"
+        android:textColor="#8005ff"/>
+
+</RelativeLayout>

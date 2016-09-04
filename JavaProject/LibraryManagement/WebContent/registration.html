@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Library</title>
+<link type="text/css" rel="stylesheet" href="Library.css">
+</head>
+<body>
+	<header>
+		<center>
+			<h2>NPU Library</h2>
+		</center>
+	</header>
+	<div id="main">
+		<center></center>
+		<br>
+		<h2>Registration</h2>
+		<br>
+		<br>
+		<form name="registerForm" action="servlet/register" method="POST">
+			Id: <input type="TEXT" name="studentId"><BR>
+			<BR> Name: <input type="TEXT" name="studentName"><BR>
+			<BR> Gender: <input type="radio" name="studentGender"
+				value="female">Female&nbsp;&nbsp; <input type="radio"
+				name="studentGender" value="male">Male<BR>
+			<BR> Course: <select name="courseName">
+				<option>MSCS
+				<option>MSEE
+				<option>MSCSE
+				<option>MBA
+			</select><BR>
+			<BR> Password: <input type="PASSWORD" name="studentpass"><BR>
+			<BR> <input type="submit" name="register" value="Register">
+		</form>
+		</center>
+	</div>
+	<footer>
+		<center>
+			<h4>
+				Privacy Policy · Terms of Use · Contact Us<br> Copyright © 2015
+				PublicLibraries.com
+			</h4>
+		</center>
+	</footer>
+</body>
+</html>

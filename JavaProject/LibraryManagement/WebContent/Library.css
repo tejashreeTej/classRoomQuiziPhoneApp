@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+body{
+    background-color:#6FDFF0;
+}
+#main{
+	background-color:#6FDFF0;
+	height:600px;
+        
+        
+}
+.anchorButton{
+    border: solid;
+    border-color: black;
+    background-color: gray;
+    height:50px;
+    width:200px;
+}
+header,footer{
+	background-color:black;
+        color: #ffffff;
+	height:100px;
+        border-bottom-style: double;
+        border-top-style: double;
+        border-color: red;
+}

@@ -1,0 +1,6 @@
+INSERT INTO `libraryDatabase`.`Student`(`studentId`,`studentName`,`studentPass`,`studentCourse`,`studentGender`,`bookId1`,`bookId2`) VALUES (14052,'Tejashree','tejas','MSCS','1',0,0);
+INSERT INTO `libraryDatabase`.`Student`(`studentId`,`studentName`,`studentPass`,`studentCourse`,`studentGender`,`bookId1`,`bookId2`) VALUES (14054,'Shree','tejal','MSCS','0',0,0);
+
+
+INSERT INTO `libraryDatabase`.`Book`(`bookId`,`bookName`,`Category`,`totalBooks`,`availableBooks`,`bookPrize`) VALUES (21,'Programming in Java','IT',20,20,45);
+INSERT INTO `libraryDatabase`.`Book`(`bookId`,`bookName`,`Category`,`totalBooks`,`availableBooks`,`bookPrize`) VALUES (22,'C++ Programming','IT',10,10,35);
