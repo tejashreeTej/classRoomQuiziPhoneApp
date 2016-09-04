@@ -74,7 +74,7 @@ class MultipleChoiceViewController: UIViewController {
     func fetchNextQuestion(index:Int){
         print("ha")
         if(index < totalQuestions){
-            let object=self.quizQuestions[index] 
+            let object=self.quizQuestions[index] as! [NSObject:AnyObject] 
             let question=object["question"] as! String
             self.QuestionLabel.text=question
             self.QNumberLabel.text="Que.\(self.currentQustionCounter)"
@@ -144,7 +144,7 @@ class MultipleChoiceViewController: UIViewController {
     @IBAction func gotoNextQuestion(sender: UIButton) {
         print("5")
         let selectedAnswer = sender.titleForState(UIControlState.Normal)
-        let object = self.quizQuestions[self.currentQustionCounter]
+        let object = self.quizQuestions[self.currentQustionCounter] as! [NSObject:AnyObject]
         let correctAnswer=object["correctAnswer"] as! String
         
         let correctanswersArr = correctAnswer.componentsSeparatedByString(";")

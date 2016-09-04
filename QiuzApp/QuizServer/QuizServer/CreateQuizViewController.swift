@@ -77,7 +77,7 @@ class CreateQuizViewController: UIViewController, UIPickerViewDelegate,UIPickerV
         CategoryArray = paramCategoryArray
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         //print("c")
         if pickerView == CategoryPicker{
             return CategoryArray[row]
@@ -85,7 +85,7 @@ class CreateQuizViewController: UIViewController, UIPickerViewDelegate,UIPickerV
             return DurationArray[row]
         }
         
-        return CategoryArray[row]
+       // return CategoryArray[row] //--will never execute
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -98,7 +98,7 @@ class CreateQuizViewController: UIViewController, UIPickerViewDelegate,UIPickerV
             return DurationArray.count
         }
         
-        return CategoryArray.count
+        //return CategoryArray.count //--will never execute
     }
     
     
@@ -130,14 +130,14 @@ class CreateQuizViewController: UIViewController, UIPickerViewDelegate,UIPickerV
             currentUser?.username as String!
             print("User => \(currentUser?.username as String!)")
         }
-        var txtTotelQ:Int? = Int(totalQueText.text!)
+        let txtTotelQ:Int? = Int(totalQueText.text!)
         
         totalQestion = txtTotelQ!
         print("createQuiz 1")
         let query=PFQuery(className: "Questions")
         print(" CategoryArray[CategorySelected]")
         print(CategoryArray[CategorySelected])
-       query.whereKey("category", equalTo: CategoryArray[CategorySelected] as! String)
+        query.whereKey("category", equalTo: CategoryArray[CategorySelected] )
         query.limit = totalQestion
         print("totalQestion \(totalQestion)")
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
@@ -148,18 +148,19 @@ class CreateQuizViewController: UIViewController, UIPickerViewDelegate,UIPickerV
                     retunedObjects = objects!
                         print("error == nil 2 =>\(retunedObjects.count)")
                            for object in retunedObjects{
+                          let  object = object as! [NSObject:AnyObject]
                               print("ji")
                             if(iQuestionCount >= self.totalQestion){
                                 break
                             }
                             iQuestionCount = iQuestionCount + 1
-                                let QuizObject=PFObject(className: "QuizToday")
-                              print("ji 2")
+                            let QuizObject=PFObject(className: "QuizToday")
+                            print("ji 2")
                                 QuizObject["question"] = object["question"]
                                 print("ji 3")
                                 QuizObject["Answers"] = object["Answers"]
                               print("ji 4")
-                                QuizObject["correctAnswer"] = object["correctAnswer"]
+                                QuizObject["correctAnswer"] = object["correctAnswer"] 
                             print("jiya")
                                 QuizObject.saveInBackgroundWithBlock { (sucessful, error) -> Void in
                                     if sucessful {

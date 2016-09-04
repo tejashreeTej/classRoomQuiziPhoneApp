@@ -27,7 +27,7 @@ class ScoreReportViewController: UIViewController ,UITableViewDataSource , UITab
        
         navigationItem.hidesBackButton = true
         
-        let query=PFQuery(className: "ScoreReport")
+        _=PFQuery(className: "ScoreReport")
         let currentUser=PFUser.currentUser()
         
         if currentUser != nil{

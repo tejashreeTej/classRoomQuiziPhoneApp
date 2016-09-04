@@ -66,7 +66,7 @@ class QuestionsViewController: UIViewController {
     func fetchNextQuestion(index:Int){
         print("ha")
         if(index < totalQuestions){
-            let object=self.quizQuestions[index]
+            let object=self.quizQuestions[index] as! [NSObject:AnyObject]
             let question=object["question"] as! String
              self.QuestionLabel.numberOfLines = 3
             self.QuestionLabel.text=question
@@ -137,7 +137,7 @@ class QuestionsViewController: UIViewController {
     @IBAction func answerSelected(sender: UIButton) {
         print("5")
         let selectedAnswer = sender.titleForState(UIControlState.Normal)
-        let object = self.quizQuestions[self.QustionCounter]
+        let object = self.quizQuestions[self.QustionCounter] as! [NSObject:AnyObject]
         let correctAnswer=object["correctAnswer"] as! String
         print("\(selectedAnswer) ==> \(correctAnswer)")
         
